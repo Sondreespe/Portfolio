@@ -1,44 +1,36 @@
 const sections = document.querySelectorAll(".section");
-const secBtns = document.querySelectorAll(".controls");
-const sectBtn = document.querySelectorAll(".control");
+const controls = document.querySelectorAll(".control"); // hver knapp
 const allSections = document.querySelector(".main-content");
 
-function pageTransition(){
-    //button click active class
-    for(let i = 0; i < sectBtn.length; i++){
-        sectBtn[i].addEventListener("click", function(){
-            let currentBtn = document.querySelectorAll(".active-btn");
-            currentBtn[0].className = currentBtn[0].className.replace("active-btn", "");
-            this.className += " active-btn";
-        })
-    }
+function pageTransition() {
+  // Klikk på knappene i menyen (ikonene)
+  controls.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // flytt active-btn til riktig knapp
+      const currentBtn = document.querySelector(".active-btn");
+      if (currentBtn) currentBtn.classList.remove("active-btn");
+      this.classList.add("active-btn");
 
-    //section active 
-    allSections.addEventListener("click", (e) =>{
-        const id = e.target.dataset.id;
-        if(id){
-            //remove selected from the other button
-            secBtns.forEach((btn) =>{
-                btn.classList.remove("active")
-            })
-            e.target.classList.add("active")
+      // bytt seksjon
+      const id = this.dataset.id; // data-id på knappen
+      if (!id) return;
 
-            // hide other sections
-            sections.forEach((section)=>{
-                section.classList.remove("active")
-            })
-            
-            const element = document.getElementById(id);
-            element.classList.add("active");
-        }
-    })
+      sections.forEach((section) => {
+        section.classList.remove("active");
+      });
 
-    //toggle theme button
-    const themeBtn = document.querySelector(".theme-btn");
-    themeBtn.addEventListener("click",() =>{
-        let element =document.body;
-        element.classList.toggle("light-mode")
-    })
+      const element = document.getElementById(id);
+      if (element) element.classList.add("active");
+    });
+  });
+
+  // toggle theme button
+  const themeBtn = document.querySelector(".theme-btn");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+    });
+  }
 }
 
 pageTransition();
