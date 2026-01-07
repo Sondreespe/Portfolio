@@ -24,5 +24,5 @@ HTML5 & CSS3
 JavaScript
 
 
-Getting Started: 
+Getting Started : 
 Copy the link: https://sondreespe.github.io/Portfolio/
