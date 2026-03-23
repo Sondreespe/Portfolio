@@ -30,7 +30,7 @@
                     På denne nettsiden finner du tidligere prosjekter og annen informasjon
                 </p>
                 <div class="btn-con">
-                    <a href="Assets/CV2024.pdf" class="main-btn" target="_blank">
+                    <a href="Assets/CV_Sondre_Espe.docx" class="main-btn" target="_blank">
                         <span class="btn-text">Download CV</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
@@ -41,19 +41,20 @@
     <main>
         <section class="section sec2 about" id="about" >
             <div class="main-title">
-                <h2>Om <span>meg</span> <span class="bg-text">Om meg</span></h2>
+                <h2>Om <span>meg</span></h2>
             </div>
             <div class="about-container">
 
                 <div class="left-about">
-                    <p>
-                       Jeg går tredje året på bachelor i informatikk–matematikk–økonomi ved Universitetet i Bergen, og planlegger å ta en mastergrad i data science. 
-                       Som aktiv student og engasjert medlem i verv trives jeg godt i miljøer der jeg får samarbeide, lære og bidra. 
-                       Jeg er nysgjerrig, målrettet og ivrig etter å utvikle meg faglig, samtidig som jeg jobber strukturert for å nå målene mine og bygge solid kompetanse innen teknologi og analyse. 
-                        
-                    </p>
+                    <ul class="about-list">
+                        <li>3. året på bachelor i informatikk–matematikk–økonomi ved UIB</li>
+                        <li>Planlegger mastergrad i data science</li>
+                        <li>Interessert i maskinlæring, dataanalyse og backend-utvikling</li>
+                        <li>Styremedlem i echo linjeforening</li>
+                        <li>Åpen for deltidsstilling eller sommerjobb innen tech</li>
+                    </ul>
                     <div class="btn-con">
-                        <a href="Assets/CV2024.pdf" class="main-btn" target="_blank">
+                        <a href="Assets/CV_Sondre_Espe.docx" class="main-btn" target="_blank">
                             <span class="btn-text">Download CV</span>
                             <span class="btn-icon"><i class="fas fa-download"></i></span>
                         </a>
@@ -195,7 +196,7 @@
                     <p class="tl-duration">2023 - nåværende</p>
                     <h5>Universitetet i Bergen<span></span></h5>
                     <p>
-                        Bs.C; Infromatikk-Mattematikk-Økonomi
+                        Bs.C; Informatikk-Matematikk-Økonomi
                     </p>
                 </div>
                 <div class="timeline-item">
@@ -215,17 +216,40 @@
                     <p class="tl-duration">2024- nåværende</p>
                     <h5>Styremedlem av echo linjeforening<span> echo</span></h5>
                     <p>
-                        Frivilig verv i linjeforening for informatikk på UIB
+                        Frivillig verv i linjeforening for informatikk på UIB
                     </p>
                 </div>
             </div>
         </section>
         <section class="section sec3 portfolio"id="portfolio">
             <div class="main-title">
-                <h2><span> Portfolio</span><span class="bg-text">Portfolio</span></h2>
+                <h2><span>Portfolio</span></h2>
             </div>
-             <p class="port-text">Some of my projects</p>
+             <p class="port-text">Noen av mine prosjekter</p>
 <div class="ports">
+    <div class="port-item">
+        <div class="image">
+            <img src="Img/financialFraud.png" alt="Anomaly Detection">
+        </div>
+        <div class="project-meta">
+            <h4 class="project-name">Anomaly Detection</h4>
+            <p class="project-desc">
+                Strømmende ML-pipeline for sanntidsdeteksjon av mistenkelige finanstransaksjoner. Data flyter fra Kafka gjennom en Isolation Forest-modell til PostgreSQL, med live evalueringsmetrikker visualisert i Streamlit. Fullt Dockerisert.
+            </p>
+            <p class="project-tech">
+                <span>Teknologi:</span> Apache Kafka, Zookeeper, Python, scikit-learn, PostgreSQL, Streamlit, Plotly, Docker, docker-compose, psycopg2, pandas, numpy
+            </p>
+        </div>
+        <div class="hover-items">
+            <h3>Se prosjekt</h3>
+            <div class="icons">
+                <a href="https://github.com/Sondreespe" target="_blank" class="icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div class="port-item">
         <div class="image">
             <img src="Img/forecast24.no.png" alt="Forecast24">
@@ -233,17 +257,20 @@
         <div class="project-meta">
             <h4 class="project-name">Forecast24.no</h4>
             <p class="project-desc">
-                Website predicting energiprices for the next 24 hours
+                Nettside som henter sanntidsdata fra Nordpool og spår strømprisene time for time de neste 24 timene. Brukeren kan velge prisområde og se visuell priskurve for dagen.
             </p>
             <p class="project-tech">
-                <span>Tech stack:</span> React, TypeScript, Vite, API, Vercel.
+                <span>Teknologi:</span> FastAPI, Python, PostgreSQL, SQLAlchemy, XGBoost, scikit-learn, psycopg2, python-dotenv, Render, Neon, React, Vite, Recharts, Axios, React Router, Vercel
             </p>
         </div>
         <div class="hover-items">
-            <h3>Go to project</h3>
+            <h3>Se prosjekt</h3>
             <div class="icons">
                 <a href="https://github.com/Sondreespe/forecast24-frontend" target="_blank" class="icon">
                     <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.forecast24.no" target="_blank" class="icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
             </div>
         </div>
@@ -254,16 +281,16 @@
             <img src="Img/numberPredictor.png" alt="Number Predictor">
         </div>
         <div class="project-meta">
-            <h4 class="project-name">Number predicter</h4>
+            <h4 class="project-name">Number-recognition</h4>
             <p class="project-desc">
-                Simple Neural Network made from scratch
+                Implementasjon av et nevralt nettverk bygget fra bunnen for å gjenkjenne håndskrevne sifre fra MNIST-datasettet. Trenet med gradient descent uten bruk av høynivå-rammeverk.
             </p>
             <p class="project-tech">
-                <span>Tech stack:</span> Python, scikit-learn, Jupyter Notebook, osv.
+                <span>Teknologi:</span> Python, NumPy, Jupyter Notebook
             </p>
         </div>
         <div class="hover-items">
-            <h3>Go to project</h3>
+            <h3>Se prosjekt</h3>
             <div class="icons">
                 <a href="https://github.com/Sondreespe/number-predictor" target="_blank" class="icon">
                     <i class="fa-brands fa-github"></i>
@@ -279,14 +306,14 @@
         <div class="project-meta">
             <h4 class="project-name">Runlog</h4>
             <p class="project-desc">
-                Private website and DB for logging activities
+                Privat treningsdagbok med full-stack arkitektur. Brukes til å logge løpeøkter, vise statistikk over tid og lagre data i en relasjonsdatabase. Kjører lokalt på egen server.
             </p>
             <p class="project-tech">
-                <span>Tech stack:</span> Javascript, PostgreSQL, HTML/CSS, osv.
+                <span>Teknologi:</span> JavaScript, Node.js, PostgreSQL, HTML/CSS
             </p>
         </div>
         <div class="hover-items">
-            <h3>Go to project</h3>
+            <h3>Se prosjekt</h3>
             <div class="icons">
                 <a href="https://github.com/Sondreespe/runlog" target="_blank" class="icon">
                     <i class="fa-brands fa-github"></i>
@@ -295,83 +322,38 @@
         </div>
     </div>
 
-    <div class="port-item">
-        <div class="image">
-            <img src="Img/enigmaSim.PNG" alt="Enigma-simulator">
-        </div>
-        <div class="project-meta">
-            <h4 class="project-name">Enigma Machine</h4>
-            <p class="project-desc">
-                Digital representation of a WW2 encryption machine
-            </p>
-            <p class="project-tech">
-                <span>Tech stack:</span> Java
-            </p>
-        </div>
-        <div class="hover-items">
-            <h3>Go to project</h3>
-            <div class="icons">
-                <a href="https://github.com/Sondreespe/Enigma-sim" target="_blank" class="icon">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-   </div>
+</div>
 
         </section>
         <section class="section sec5 contact"id="contact">
             <div class="contact-container">
                 <div class="main-title">
-                    <h2>Kontakt <span>meg</span> <span class="bg-text">Kontakt</span></h2>
+                    <h2>Kontakt <span>meg</span></h2>
                 </div>
                 <div class="contact-content-container">
                     <div class="left-contact">
-                        <h4>Kontakt meg her:</h4>
-                        <p>
-                            Hvis du skal ha behov for å kontakte meg er det bare å sende mail eller ringe:
-                        </p>
+                        <h4>Ta kontakt</h4>
+                        <p>Ikke nøl med å sende en melding om du har spørsmål eller vil slå av en prat.</p>
                         <div class="contact-info">
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <span>Område</span>
-                                </div>
-                                <p>
-                                    : Bergen, Norge
-                                </p>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Bergen, Norge</span>
                             </div>
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    : Sondreespe02@gmail.com
-                                </p>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>Sondreespe02@gmail.com</span>
                             </div>
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-phone"></i>  
-                                    <span>Mobilnummer</span>                                      
-                                </div>
-                                <p>
-                                    : +47 47 48 73 09
-                                </p>
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+47 47 48 73 09</span>
                             </div>
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <span>Språk</span>
-                                </div>
-                                <p>
-                                    : Norsk, Engelsk
-                                </p>
+                                <i class="fa-solid fa-language"></i>
+                                <span>Norsk, Engelsk</span>
                             </div>
                         </div>
                         <div class="contact-icons">
-                            <div class="contact-icon" target="_blank">
+                            <div class="contact-icon">
                                 <a href="https://www.linkedin.com/in/sondre-espe-76930a291/" target="_blank">
                                     <i class="fa-brands fa-linkedin"></i>
                                 </a>
@@ -380,26 +362,6 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="right-contact">
-                        <form action="mailto:Sondreespe02@gmail.com" method="post" enctype="text/plain" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="NAVN">
-                                <input type="email" required placeholder="MAIL">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="Emne">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Melding her...."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <button type="submit" class="main-btn">
-                                    <span class="btn-text">Send</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
