@@ -419,7 +419,11 @@ section {
   margin-top: 3rem;
 }
 .ports .port-item {
+  border-radius: 15px;
+}
+.ports .port-item .image {
   position: relative;
+  overflow: hidden;
   border-radius: 15px;
 }
 .ports .port-item img {
@@ -427,7 +431,7 @@ section {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 15px;
+  display: block;
 }
 .ports .port-item .hover-items {
   width: 100%;
@@ -436,7 +440,6 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -608,6 +611,8 @@ section {
 .btn-con {
   display: flex;
   align-self: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .main-btn {
