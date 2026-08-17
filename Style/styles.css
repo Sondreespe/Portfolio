@@ -120,12 +120,12 @@ section {
   justify-content: center;
   transform: translateY(-50%);
 }
-.controls .active-btn {
-  background-color: var(--color-secondary) !important;
+.controls .control.active-btn {
+  background-color: var(--color-secondary);
   transition: all 0.4s ease-in-out;
 }
-.controls .active-btn i {
-  color: var(--color-white) !important;
+.controls .control.active-btn i {
+  color: var(--color-white);
 }
 .controls .control {
   padding: 1rem;
@@ -539,9 +539,13 @@ section {
   width: 20px;
   text-align: center;
 }
-.contact-content-container .left-contact .contact-info .contact-item span {
+.contact-content-container .left-contact .contact-info .contact-item span,
+.contact-content-container .left-contact .contact-info .contact-item a {
   color: var(--color-grey-1);
   font-size: 0.95rem;
+}
+.contact-content-container .left-contact .contact-info .contact-item a:hover {
+  color: var(--color-secondary);
 }
 .contact-content-container .left-contact .contact-icon {
   display: flex;
@@ -597,14 +601,6 @@ section {
 }
 .contact-content-container .right-contact .i-c-2 :last-child {
   margin-left: 1.5rem;
-}
-.contact-content-container .right-contact .submit-btn {
-  display: flex;
-  justify-content: flex-start;
-}
-.contact-content-container .right-contact .main-btn {
-  background-color: var(--color-primary) !important;
-  cursor: pointer;
 }
 
 /* independetnt components*/

@@ -1,4 +1,4 @@
-#Portfolio Website
+# Portfolio Website
 
 Overview:
 This is a personal portfolio website created to showcase my previous projects and provide potential employers with an overview of who I am, both professionally and personally. The site serves as a digital CV, presenting selected works, technical competencies, and relevant background information.
